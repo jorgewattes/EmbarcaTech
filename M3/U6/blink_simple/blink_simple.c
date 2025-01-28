@@ -1,36 +1,28 @@
+// Sample from the ADC continuously at a particular sample rate
+// and then outputs base64 bytes via Serial
+// much of this code is from pico-examples/adc/dma_capture/dma_capture.c
+// the rest is written by Alex sWulff (www.AlexWulff.com)
+
 #include <stdio.h>
+#include <string.h>
 #include "pico/stdlib.h"
 #include "hardware/dma.h"
-#include "hardware/timer.h"
-#include "hardware/uart.h"
 
-// Data will be copied from src to dst
-const char src[] = "Hello, world! (from DMA)";
-char dst[count_of(src)];
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 
-int64_t alarm_callback(alarm_id_t id, void *user_data) {
-    // Put your timeout handler code in here
-    return 0;
-}
 
-// UART defines
-// By default the stdout UART is `uart0`, so we will use the second one
-#define UART_ID uart1
-#define BAUD_RATE 115200
-
-// Use pins 4 and 5 for UART1
-// Pins can be changed, see the GPIO function select table in the datasheet for information on GPIO assignments
-#define UART_TX_PIN 4
-#define UART_RX_PIN 5
-
+// set this to determine sample rate
+// 0     = 500,000 Hz
+// 960   = 50,000 Hz
+// 9600  = 5,000 Hz
 #define CLOCK_DIV 12000
+
+// Channel 0 is GPIO26
 #define CAPTURE_CHANNEL 0
 #define LED_PIN 25
 #define NSAMP 10000
-
-uint16_t capture_buf[NSAMP];
-float sending_buf[NSAMP];
-char base64_output[NSAMP * 4];
 
 static const char base64_chars[] =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -51,6 +43,10 @@ void base64_encode(const uint8_t *input, size_t input_len, char *output) {
     }
     output[j] = '\0';
 }
+
+uint16_t capture_buf[NSAMP];
+float sending_buf[NSAMP];
+char base64_output[NSAMP * 4];
 
 int main() {
     stdio_init_all();

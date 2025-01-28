@@ -1,0 +1,326 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags:  
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: -c 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: -Aa 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/stdlib/exit.c:65:(.text.exit+0x2c): undefined reference to `_exit'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-closer.o): in function `_close_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/closer.c:47:(.text._close_r+0x1c): undefined reference to `_close'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x24): undefined reference to `_lseek'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-readr.o): in function `_read_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/readr.c:49:(.text._read_r+0x24): undefined reference to `_read'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-writer.o): in function `_write_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/writer.c:49:(.text._write_r+0x24): undefined reference to `_write'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0x1c): undefined reference to `_sbrk'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags:  
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: -c 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: --c++ 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '--c++'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: --ec++ 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '--ec++'; did you mean '-Weffc++'?
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/stdlib/exit.c:65:(.text.exit+0x2c): undefined reference to `_exit'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-closer.o): in function `_close_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/closer.c:47:(.text._close_r+0x1c): undefined reference to `_close'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x24): undefined reference to `_lseek'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-readr.o): in function `_read_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/readr.c:49:(.text._read_r+0x24): undefined reference to `_read'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-writer.o): in function `_write_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/writer.c:49:(.text._write_r+0x24): undefined reference to `_write'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0x1c): undefined reference to `_sbrk'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/dev/EmbarcaTech/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_3d99d\fast && O sistema não pode encontrar o arquivo especificado
+Generator: execution of make failed. Make command was: nmake /nologo cmTC_3d99d\fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/dev/EmbarcaTech/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_98b7a\fast && O sistema não pode encontrar o arquivo especificado
+Generator: execution of make failed. Make command was: nmake /nologo cmTC_98b7a\fast && 
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: -mcpu=cortex-m0plus;-mthumb
+Id flags:  
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: -mcpu=cortex-m0plus;-mthumb
+Id flags: -c 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: -mcpu=cortex-m0plus;-mthumb
+Id flags: -Aa 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: -mcpu=cortex-m0plus;-mthumb
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: -mcpu=cortex-m0plus;-mthumb
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-gcc.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/stdlib/exit.c:65:(.text.exit+0x2c): undefined reference to `_exit'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-closer.o): in function `_close_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/closer.c:47:(.text._close_r+0x1c): undefined reference to `_close'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x24): undefined reference to `_lseek'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-readr.o): in function `_read_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/readr.c:49:(.text._read_r+0x24): undefined reference to `_read'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-writer.o): in function `_write_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/writer.c:49:(.text._write_r+0x24): undefined reference to `_write'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0x1c): undefined reference to `_sbrk'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags:  
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: -c 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: --c++ 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '--c++'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: --ec++ 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '--ec++'; did you mean '-Weffc++'?
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: ;-mcpu=cortex-m0plus;-mthumb
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '-mthumb'
+aarch64-none-elf-g++.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/aarch64-none-elf-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/stdlib/exit.c:65:(.text.exit+0x2c): undefined reference to `_exit'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-closer.o): in function `_close_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/closer.c:47:(.text._close_r+0x1c): undefined reference to `_close'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x24): undefined reference to `_lseek'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-readr.o): in function `_read_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/readr.c:49:(.text._read_r+0x24): undefined reference to `_read'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-writer.o): in function `_write_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/writer.c:49:(.text._write_r+0x24): undefined reference to `_write'
+C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1/../../../../aarch64-none-elf/bin/ld.exe: C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/toolchain/13.2 Rel1/bin/../lib/gcc/aarch64-none-elf/13.2.1\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+/data/jenkins/workspace/GNU-toolchain/arm-13-2/src/newlib-cygwin/newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0x1c): undefined reference to `_sbrk'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/dev/EmbarcaTech/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_e1d6d\fast && O sistema não pode encontrar o arquivo especificado
+Generator: execution of make failed. Make command was: nmake /nologo cmTC_e1d6d\fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/dev/EmbarcaTech/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_aa3e8\fast && O sistema não pode encontrar o arquivo especificado
+Generator: execution of make failed. Make command was: nmake /nologo cmTC_aa3e8\fast && 
+
+

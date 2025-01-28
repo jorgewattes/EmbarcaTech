@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "base64.h": "c"
     },
-    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
+    "C_Cpp.default.compilerPath": "C:\\Users\\watte\\.pico-sdk\\toolchain\\13_3_Rel1\\bin\\arm-none-eabi-gcc.exe",
+    "cmake.sourceDirectory": "C:/dev/EmbarcaTech/M3/U6/data_collect"
 }

@@ -1,0 +1,184 @@
+O Raspberry Pi Pico (RP2040) não pode executar diretamente a biblioteca **TensorFlow** completa, porque é um microcontrolador com recursos limitados de memória e processamento. Em vez disso, você pode usar **TensorFlow Lite for Microcontrollers (TFLM)**, que é projetado especificamente para dispositivos de baixo consumo.
+
+Aqui estão os passos para configurar o **TensorFlow Lite for Microcontrollers (TFLM)** no Raspberry Pi Pico:
+
+---
+
+## **1. Pré-requisitos**
+
+Antes de começar, você precisará:
+
+- Um ambiente de desenvolvimento configurado com o **Pico SDK** no seu computador.  
+  (Se ainda não configurou, veja o guia oficial: [Raspberry Pi Pico SDK](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)).
+  
+- Ferramentas de build instaladas, como:
+  - `CMake`
+  - `Make`
+  - Compilador **ARM GCC**.
+
+- Conhecimento básico sobre como compilar e fazer upload de código para o Pico.
+
+---
+
+## **2. Clonar o Repositório do TensorFlow Lite para Microcontroladores**
+
+1. Clone o repositório do TensorFlow Lite para microcontroladores:
+   ```bash
+   git clone https://github.com/tensorflow/tflite-micro.git
+   cd tflite-micro
+   ```
+
+2. Atualize os submódulos:
+   ```bash
+   git submodule update --init --recursive
+   ```
+
+3. Verifique se o código está atualizado:
+   ```bash
+   git pull origin main
+   ```
+
+---
+
+## **3. Integrar o TensorFlow Lite ao Projeto com o Pico SDK**
+
+Para usar o **TensorFlow Lite for Microcontrollers** em projetos do Raspberry Pi Pico, você precisará incluir os arquivos necessários no projeto CMake. 
+
+1. Navegue para o diretório onde você configurou o **Pico SDK** e seu projeto.
+
+2. Crie um novo diretório chamado `tensorflow_lite` dentro do seu projeto:
+   ```bash
+   mkdir tensorflow_lite
+   ```
+
+3. Copie os arquivos do TensorFlow Lite necessários:
+   - Navegue até o repositório clonado anteriormente (`tflite-micro`) e copie os seguintes diretórios para o seu projeto:
+     - `tensorflow/lite/micro`
+     - `tensorflow/lite/schema`
+     - `third_party/flatbuffers/include`
+   
+   O layout do seu projeto deve ficar assim:
+   ```
+   my_project/
+   ├── CMakeLists.txt
+   ├── main.c
+   ├── tensorflow_lite/
+       ├── micro/
+       ├── schema/
+       ├── include/
+   ```
+
+4. Atualize o `CMakeLists.txt` para incluir o TensorFlow Lite:
+
+   ```cmake
+   cmake_minimum_required(VERSION 3.13)
+   include(pico_sdk_import.cmake)
+
+   project(my_project)
+
+   pico_sdk_init()
+
+   add_executable(my_project
+       main.c
+   )
+
+   # Incluir bibliotecas do TensorFlow Lite
+   target_include_directories(my_project PRIVATE
+       ${CMAKE_CURRENT_LIST_DIR}/tensorflow_lite/micro
+       ${CMAKE_CURRENT_LIST_DIR}/tensorflow_lite/schema
+       ${CMAKE_CURRENT_LIST_DIR}/tensorflow_lite/include
+   )
+
+   # Vincular o SDK do Pico e outras bibliotecas necessárias
+   target_link_libraries(my_project pico_stdlib hardware_adc)
+
+   # Adicionar configuração para criar arquivo UF2
+   pico_add_extra_outputs(my_project)
+   ```
+
+5. Compile o projeto:
+   ```bash
+   mkdir build
+   cd build
+   cmake ..
+   make
+   ```
+
+---
+
+## **4. Usar o TensorFlow Lite no Código**
+
+Aqui está um exemplo básico de como integrar o TensorFlow Lite em seu programa `main.c`:
+
+```c
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "tensorflow/lite/micro/all_ops_resolver.h"
+#include "tensorflow/lite/micro/micro_interpreter.h"
+#include "tensorflow/lite/schema/schema_generated.h"
+#include "tensorflow/lite/version.h"
+
+// Modelo em formato TensorFlow Lite convertido para C (arquivo .h gerado com xxd)
+#include "model_data.h"
+
+#define TENSOR_ARENA_SIZE 2048
+uint8_t tensor_arena[TENSOR_ARENA_SIZE];
+
+int main() {
+    stdio_init_all();
+    printf("Inicializando TensorFlow Lite...\n");
+
+    // Inicializa o modelo
+    const tflite::Model* model = tflite::GetModel(model_data);
+    if (model->version() != TFLITE_SCHEMA_VERSION) {
+        printf("Modelo incompatível com TensorFlow Lite!\n");
+        while (1);
+    }
+
+    // Configurar o TensorFlow Lite Interpreter
+    tflite::MicroErrorReporter error_reporter;
+    tflite::AllOpsResolver resolver;
+    tflite::MicroInterpreter interpreter(
+        model, resolver, tensor_arena, TENSOR_ARENA_SIZE, &error_reporter);
+
+    interpreter.AllocateTensors();
+
+    // Obter entrada e saída
+    TfLiteTensor* input = interpreter.input(0);
+    TfLiteTensor* output = interpreter.output(0);
+
+    // Alimentar o modelo com valores fictícios (exemplo)
+    for (int i = 0; i < input->dims->data[0]; i++) {
+        input->data.f[i] = 0.0f;  // Substitua pelos dados reais
+    }
+
+    // Executar inferência
+    interpreter.Invoke();
+
+    // Imprimir resultados
+    printf("Resultado: %f\n", output->data.f[0]);
+
+    while (1) {
+        sleep_ms(1000);
+    }
+}
+```
+
+---
+
+## **5. Converter o Modelo para `.h`**
+
+Se você treinou seu modelo no TensorFlow (Python), você precisará convertê-lo para um array C para usá-lo no código acima.
+
+1. Converta seu modelo `.tflite` para um arquivo `.h` com o comando:
+   ```bash
+   xxd -i model.tflite > model_data.h
+   ```
+
+2. Inclua o arquivo `model_data.h` no seu projeto.
+
+---
+
+### **Pronto!**
+
+Com essas etapas, você configurou o TensorFlow Lite for Microcontrollers no Raspberry Pi Pico, preparou um modelo treinado e o integrou ao código C para execução de inferências. 🚀 Se precisar de ajuda com o treinamento do modelo ou pré-processamento, posso ajudar também!
